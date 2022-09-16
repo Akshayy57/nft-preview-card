@@ -1,0 +1,147 @@
+/*
+font-family: 'Outfit', sans-serif;
+300, 400, 600
+ */
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--very-dark-blue-main-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+p {
+    color: var(--soft-blue);
+}
+
+.container {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    background-color: var(--very-dark-blue-card-bg);
+    margin: 2rem 1rem;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.75);
+}
+
+.img-top {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-top img {
+    width: 100%;
+    display: block;
+}
+
+.img-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    display: none;
+}
+
+.img-overlay img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+}
+
+.img-top:hover .img-overlay {
+    display: block;
+    cursor: pointer;
+}
+
+.box-text a {
+    color: var(--white);
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 0;
+}
+
+.box-text a:hover {
+    color: var(--cyan);
+}
+
+.box-text p {
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.eth,
+.days {
+    display: flex;
+    align-items: center;
+}
+
+.eth p {
+    color: var(--cyan);
+    padding-left: 8px;
+    font-weight: 600;
+}
+
+.days p {
+    padding-left: 8px;
+}
+
+hr {
+    border-color: var(--very-dark-blue-line);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    /* padding-top: 20px; */
+}
+
+.author img {
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.author-name {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.author-name:hover {
+    color: var(--cyan);
+}
